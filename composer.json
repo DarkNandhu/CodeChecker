@@ -1,0 +1,9 @@
+{
+    "name": "Code Checker",
+    "description": "An Api based Compiler interfacer built by Narendran",
+    "autoload": {
+        "psr-4": {
+            "Codechecker\\": "app/Codechecker"
+        }
+    }
+}
