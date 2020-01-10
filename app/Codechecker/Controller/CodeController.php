@@ -28,19 +28,10 @@ class CodeController{
 		case "java":
 			return 'java TempCode.'.explode(".", $file)[0];
 		break;
-		case "python":
-			return 'python TempCode/'.$file;
+		default:
+			return $lang.' TempCode/'.$file;
 		break;
-		case "php":
-			return 'php TempCode/'.$file;
-        break;
-        case "ruby":
-			return 'ruby TempCode/'.$file;
-        break;
-        case "javascript":
-			return 'node TempCode/'.$file;
-		break;
-	}
+		}
     }
 //Generic Running script
     public function Run($file, $lang, $input){
@@ -127,6 +118,9 @@ class CodeController{
 
             case "javascript":
                 $fileName = $fileName.'.js';
+            break;
+            case "perl":
+                $fileName = $fileName.'.pl';
             break;
 			
 		}
